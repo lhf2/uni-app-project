@@ -2,7 +2,30 @@
   "name": "uni-app-vue-cli",
   "version": "0.1.0",
   "private": true,
+  "uni-app": {
+    "scripts": {
+      "mp-weixin1": {
+        "title": "微信小程序1",
+        "env": {
+          "UNI_PLATFORM": "mp-weixin"
+        },
+        "define": {
+          "MP-WEIXIN1": true
+        }
+      },
+      "mp-weixin2": {
+        "title": "微信小程序2",
+        "env": {
+          "UNI_PLATFORM": "mp-weixin"
+        },
+        "define": {
+          "MP-WEIXIN2": true
+        }
+      }
+    }
+  },
   "scripts": {
+    "dev:manifest": "cross-env NODE_ENV=development node ./modifyManifest.js",
     "serve": "npm run dev:h5",
     "build": "npm run build:h5",
     "build:app-plus": "cross-env NODE_ENV=production UNI_PLATFORM=app-plus vue-cli-service uni-build",
@@ -86,8 +109,8 @@
     "@dcloudio/vue-cli-plugin-uni-optimize": "^2.0.1-34920220609002",
     "@dcloudio/webpack-uni-mp-loader": "^2.0.1-34920220609002",
     "@dcloudio/webpack-uni-pages-loader": "^2.0.1-34920220609002",
-    "@vue/cli-plugin-babel": "~5.0.0",
-    "@vue/cli-service": "~5.0.0",
+    "@vue/cli-plugin-babel": "^4.0.0",
+    "@vue/cli-service": "^4.0.0",
     "babel-plugin-import": "^1.11.0",
     "cross-env": "^7.0.2",
     "jest": "^25.4.0",
@@ -102,8 +125,5 @@
   ],
   "resolutions": {
     "@babel/runtime": "~7.17.9"
-  },
-  "uni-app": {
-    "scripts": {}
   }
 }
