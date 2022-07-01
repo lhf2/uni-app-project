@@ -31,7 +31,6 @@ function modifyManifest() {
     fs.writeFileSync(manifestPath, newManifestData, {
         "flag": "w"
     })
-
 }
 
 // 替换 manifest.json 中的值

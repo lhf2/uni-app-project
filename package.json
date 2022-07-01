@@ -13,7 +13,7 @@
           "MP-WEIXIN1": true
         }
       },
-      "mp-weixin2": {
+      "dev:custom mp-weixin2": {
         "title": "微信小程序2",
         "env": {
           "UNI_PLATFORM": "mp-weixin"
@@ -25,7 +25,6 @@
     }
   },
   "scripts": {
-    "dev:manifest": "cross-env NODE_ENV=development node ./modifyManifest.js",
     "serve": "npm run dev:h5",
     "build": "npm run build:h5",
     "build:app-plus": "cross-env NODE_ENV=production UNI_PLATFORM=app-plus vue-cli-service uni-build",
