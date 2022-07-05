@@ -13,7 +13,7 @@ module.exports = {
 
     // 语句行末是否添加分号 default:true
 
-    semi: true,
+    semi: false,
 
     // 是否使用单引号 default:false
 
