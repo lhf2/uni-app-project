@@ -15,7 +15,7 @@ export default {
   data() {
     return {
       menuButtonInfo: {},
-      statusBarHeight: uni.getSystemInfoSync().statusBarHeight,
+      statusBarHeight: uni.getSystemInfoSync().statusBarHeight
     }
   },
   created() {
@@ -29,7 +29,7 @@ export default {
         this.menuButtonInfo.height +
         'px'
       )
-    },
+    }
   },
   methods: {},
 };
