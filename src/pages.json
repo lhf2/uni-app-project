@@ -12,9 +12,9 @@
 			"path": "pages/weixin1/weixin1",
 			"style": {
 				"navigationBarTitleText": "微信小程序1",
-				"enablePullDownRefresh": false
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom"
 			}
-
 		}
 		// #endif
 		// #ifdef MP-WEIXIN2
