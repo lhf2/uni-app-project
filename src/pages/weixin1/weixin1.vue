@@ -1,16 +1,18 @@
 <template>
-	<view class="header-container" :style="{'margin-top': topNav}">
-		<view class="tab">tab1</view>
-		<view class="tab">tab2</view>
-	</view>
 	<view>
-		<text>这是微信小程序1的定制页面</text>
-		<text>这是微信小程序1的定制页面</text>
-		<text>这是微信小程序1的定制页面</text>
-		<text>这是微信小程序1的定制页面</text>
-		<text>这是微信小程序1的定制页面</text>
-		<text>这是微信小程序1的定制页面</text>
-		<text>这是微信小程序1的定制页面</text>
+		<view class="header-container" :style="{'margin-top': topNav}">
+			<view class="tab">tab1</view>
+			<view class="tab">tab2</view>
+		</view>
+		<view>
+			<text>这是微信小程序1的定制页面</text>
+			<text>这是微信小程序1的定制页面</text>
+			<text>这是微信小程序1的定制页面</text>
+			<text>这是微信小程序1的定制页面</text>
+			<text>这是微信小程序1的定制页面</text>
+			<text>这是微信小程序1的定制页面</text>
+			<text>这是微信小程序1的定制页面</text>
+		</view>
 	</view>
 </template>
 
