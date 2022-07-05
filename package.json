@@ -25,6 +25,7 @@
     }
   },
   "scripts": {
+    "prepare": "husky install",
     "lint:eslint": "eslint --fix --ext \"src/**/*.{vue,less,css,scss}\"",
     "lint:prettier": "prettier --write --loglevel warn \"src/**/*.{js,json,tsx,css,less,scss,vue,html,md}\"",
     "gc": "git add -A && git-cz && git pull && git push",
@@ -137,12 +138,7 @@
   "resolutions": {
     "@babel/runtime": "~7.17.9"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,vue}": "npm run lint:eslint && npm run lint:prettier"
+    "src/**/*.{js,jsx,ts,tsx,vue}": "npm run lint:eslint && npm run lint:prettier"
   }
 }
