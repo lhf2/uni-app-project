@@ -20,14 +20,14 @@
 </template>
 
 <script>
-  import { getTaskLists } from '../../api/task';
-  import login from '../../components/login.vue';
+  import { getTaskLists } from '../../api/task'
+  import login from '../../components/login.vue'
 
   export default {
     data() {
       return {
         title: 'Hello',
-      };
+      }
     },
     components: {
       login,
@@ -42,21 +42,21 @@
       goWeixin1() {
         uni.navigateTo({
           url: '../weixin1/weixin1',
-        });
+        })
       },
       goWeixin2() {
         uni.navigateTo({
           url: '../weixin2/weixin2',
-        });
+        })
       },
       getTaskList(params) {
-        getTaskLists(params).then((res) => console.log('res', res));
+        getTaskLists(params).then((res) => console.log('res', res))
       },
       handleScore() {
-        console.log('handleScore 打分');
+        console.log('handleScore 打分')
       },
     },
-  };
+  }
 </script>
 
 <style>

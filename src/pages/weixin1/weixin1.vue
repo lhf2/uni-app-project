@@ -19,10 +19,10 @@
       return {
         menuButtonInfo: {},
         statusBarHeight: uni.getSystemInfoSync().statusBarHeight,
-      };
+      }
     },
     created() {
-      this.menuButtonInfo = uni.getMenuButtonBoundingClientRect();
+      this.menuButtonInfo = uni.getMenuButtonBoundingClientRect()
     },
     computed: {
       topNav: function () {
@@ -31,11 +31,11 @@
           (this.menuButtonInfo.top - this.statusBarHeight) * 2 +
           this.menuButtonInfo.height +
           'px'
-        );
+        )
       },
     },
     methods: {},
-  };
+  }
 </script>
 
 <style>

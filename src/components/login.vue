@@ -14,48 +14,48 @@
       return {
         code: '',
         isLogin: uni.getStorageSync('token') || false,
-      };
+      }
     },
     created() {
-      this.getCode();
+      this.getCode()
     },
     methods: {
       getCode() {
-        const _self = this;
+        const _self = this
         uni.login({
           provider: 'weixin',
           success(res) {
-            _self.code = res.code;
+            _self.code = res.code
           },
-        });
+        })
       },
       getPhoneNumber(e) {
-        const _self = this;
+        const _self = this
         // 不允许授权
         if (e.detail.errMsg != 'getPhoneNumber:ok') {
           uni.showToast({
             title: '获取手机号失败',
             icon: 'none',
-          });
-          return;
+          })
+          return
         }
         // 允许授权 传给后端解析
         if (!_self.code) {
-          _self.getCode();
-          return;
+          _self.getCode()
+          return
         }
 
         let params = {
           login_code: _self.code,
           iv: e.detail.iv,
           encrypted_data: e.detail.encryptedData,
-        };
+        }
 
-        _self.getminiProgramToken(params);
+        _self.getminiProgramToken(params)
       },
       //服务端解密手机号
       getminiProgramToken(obj) {
-        const _self = this;
+        const _self = this
         // todo 调用后端接口，成功了之后做下面的操作
         uni.setStorage({
           key: 'token',
@@ -65,21 +65,21 @@
               title: '授权成功',
               icon: 'none',
               duration: 1500,
-            });
-            _self.isLogin = true;
-            _self.handleCb();
+            })
+            _self.isLogin = true
+            _self.handleCb()
           },
-        });
+        })
       },
       handleCb() {
         if (!this.isLogin) {
-          return;
+          return
         }
         // 触发一个事件
-        this.$emit('loginCb');
+        this.$emit('loginCb')
       },
     },
-  };
+  }
 </script>
 
 <style>

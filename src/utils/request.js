@@ -1,10 +1,10 @@
 function http(method, url, data) {
   // 根据环境变量处理baseUrl
-  let env = process.env.NODE_ENV;
+  let env = process.env.NODE_ENV
   let baseUrl =
-    env === 'development' ? 'https://test.renwudingdong.com' : 'https://edit.renwudingdong.com';
+    env === 'development' ? 'https://test.renwudingdong.com' : 'https://edit.renwudingdong.com'
   // 处理 method 大小写
-  method = method && method.toLocaleUpperCase();
+  method = method && method.toLocaleUpperCase()
 
   // 请求拦截
   uni.addInterceptor('request', {
@@ -13,9 +13,9 @@ function http(method, url, data) {
       let access_token =
         uni.getStorageSync('identity') == 1
           ? uni.getStorageSync('token')
-          : uni.getStorageSync('recruiterToken');
-      args.url = baseUrl + args.url;
-      args.header.Authorization = access_token;
+          : uni.getStorageSync('recruiterToken')
+      args.url = baseUrl + args.url
+      args.header.Authorization = access_token
     },
     // 成功回调拦截
     success(res) {},
@@ -23,9 +23,9 @@ function http(method, url, data) {
     fail(err) {},
     // 完成回调拦截
     complete(res) {
-      uni.hideLoading();
+      uni.hideLoading()
     },
-  });
+  })
 
   // 请求
   return new Promise((resolve, reject) => {
@@ -38,7 +38,7 @@ function http(method, url, data) {
       },
       success(res) {
         if (res.data.errCode === 0) {
-          res.data.data && resolve(res.data.data);
+          res.data.data && resolve(res.data.data)
         } else if (res.statusCode === 401) {
           if (uni.getStorageSync('identity') == 1) {
             uni.removeStorage({
@@ -47,31 +47,31 @@ function http(method, url, data) {
                 uni.removeStorage({
                   key: 'token',
                   success: function (res) {
-                    console.log(res);
+                    console.log(res)
                   },
-                });
+                })
               },
-            });
+            })
           } else {
             uni.removeStorage({
               key: 'recruiterToken',
               success: function (res) {
-                console.log(res);
+                console.log(res)
               },
-            });
+            })
           }
         } else if (res.statusCode === 500) {
           uni.showToast({
             title: '网络错误，请稍后再试',
             icon: 'none',
             duration: 2000,
-          });
+          })
         } else {
           uni.showToast({
             title: res.data.errMsg,
             icon: 'none',
             duration: 2500,
-          });
+          })
         }
       },
       fail(err) {
@@ -79,11 +79,11 @@ function http(method, url, data) {
           title: '您当前网络环境不好，请稍后再试',
           icon: 'none',
           duration: 1500,
-        });
-        reject(err);
+        })
+        reject(err)
       },
-    });
-  });
+    })
+  })
 }
 
-export default http;
+export default http
