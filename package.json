@@ -27,7 +27,6 @@
   "scripts": {
     "lint:eslint": "eslint --fix --ext \"src/**/*.{vue,less,css,scss}\"",
     "lint:prettier": "prettier --write --loglevel warn \"src/**/*.{js,json,tsx,css,less,scss,vue,html,md}\"",
-    "lint:stylelint": "stylelint --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
     "gc": "git add -A && git-cz && git pull && git push",
     "serve": "npm run dev:h5",
     "build": "npm run build:h5",
@@ -142,5 +141,8 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,vue}": "npm run lint:eslint && npm run lint:prettier"
   }
 }
