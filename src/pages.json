@@ -1,37 +1,35 @@
 {
-	"pages": [
-		{
-			"path": "pages/index/index",
-			"style": {
-				"navigationBarTitleText": "uni-app"
-			}
-		}
-		// #ifdef MP-WEIXIN1
-		,
-		{
-			"path": "pages/weixin1/weixin1",
-			"style": {
-				"navigationBarTitleText": "微信小程序1",
-				"enablePullDownRefresh": false,
-				"navigationStyle": "custom"
-			}
-		}
-		// #endif
-		// #ifdef MP-WEIXIN2
-		,
-		{
-			"path": "pages/weixin2/weixin2",
-			"style": {
-				"navigationBarTitleText": "微信小程序2",
-				"enablePullDownRefresh": false
-			}
-		}
-		// #endif
-	],
-	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
-	}
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    // #ifdef MP-WEIXIN1
+    {
+      "path": "pages/weixin1/weixin1",
+      "style": {
+        "navigationBarTitleText": "微信小程序1",
+        "enablePullDownRefresh": false,
+        "navigationStyle": "custom"
+      }
+    },
+    // #endif
+    // #ifdef MP-WEIXIN2
+    {
+      "path": "pages/weixin2/weixin2",
+      "style": {
+        "navigationBarTitleText": "微信小程序2",
+        "enablePullDownRefresh": false
+      }
+    }
+    // #endif
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  }
 }
