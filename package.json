@@ -137,5 +137,10 @@
   ],
   "resolutions": {
     "@babel/runtime": "~7.17.9"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
