@@ -5,8 +5,9 @@
       "style": {
         "navigationBarTitleText": "uni-app"
       }
-    },
+    }
     // #ifdef MP-WEIXIN1
+    ,
     {
       "path": "pages/weixin1/weixin1",
       "style": {
@@ -14,9 +15,10 @@
         "enablePullDownRefresh": false,
         "navigationStyle": "custom"
       }
-    },
+    }
     // #endif
     // #ifdef MP-WEIXIN2
+    ,
     {
       "path": "pages/weixin2/weixin2",
       "style": {
