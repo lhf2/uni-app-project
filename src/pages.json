@@ -3,8 +3,21 @@
     {
       "path": "pages/video/video",
       "style": {
-		  "navigationStyle": "custom"
-	  }
+        "navigationStyle": "custom",
+        "app-plus": {
+          "subNVues": [
+            {
+              "id": "nav",
+              "path": "pages/video/subNVue/nav",
+              "type": "navigationBar",
+              "style": {
+                "width": "100vw",
+                "height": "60px"
+              }
+            }
+          ]
+        }
+      }
     },
     {
       "path": "pages/index/index",
@@ -33,7 +46,7 @@
       }
     }
     // #endif
-    ],
+  ],
   "globalStyle": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uni-app",
