@@ -26,7 +26,7 @@
       }
     }
     // #ifdef MP-WEIXIN1
-    ,
+	,
     {
       "path": "pages/weixin1/weixin1",
       "style": {
@@ -46,11 +46,46 @@
       }
     }
     // #endif
-  ],
+    ,{
+            "path" : "pages/tasks/tasks",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
   "globalStyle": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uni-app",
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+  	"color": "#999999",
+  	"selectedColor": "#FF8008",
+  	"borderStyle": "white",
+  	"fontSize": "12px",
+  	"backgroundColor": "#ffffff",
+  	"iconWidth": "30px",
+  	"height": "56px",
+  	"list": [
+  		// #ifdef APP-PLUS
+  		{
+  			"pagePath": "pages/tasks/tasks",
+  			"iconPath": "static/tab/tasks-icon.png",
+  			"selectedIconPath": "static/tab/tasks-selected-icon.png",
+  			"text": "任务"
+  		},
+  		{
+  			"pagePath": "pages/video/video",
+  			"iconPath": "static/tab/community-icon.png",
+  			"selectedIconPath": "static/tab/community-selected-icon.png",
+  			"text": "社区"
+  			
+  		}
+  		// #endif
+  	]
   }
 }
