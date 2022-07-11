@@ -22,6 +22,8 @@ function getCustomAppId() {
 function modifyManifest() {
     const fs = require('fs')
     const appId = getCustomAppId()
+    // 如果没有appId的话就不做替换操作了
+    if (!appId) return
     // manifest.json 路径
     const manifestPath = `${__dirname}/src/manifest.json`
     // 读取文件数据

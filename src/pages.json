@@ -20,13 +20,20 @@
       }
     },
     {
+      "path": "pages/tasks/tasks",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
       "path": "pages/index/index",
       "style": {
         "navigationBarTitleText": "uni-app"
       }
     }
     // #ifdef MP-WEIXIN1
-	,
+    ,
     {
       "path": "pages/weixin1/weixin1",
       "style": {
@@ -46,16 +53,31 @@
       }
     }
     // #endif
-    ,{
-            "path" : "pages/tasks/tasks",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
+  ],
+  "subPackages": [
+    {
+      "root": "pages/sub",
+      "pages": [
+        {
+          "path": "sub",
+          "style": {
+            "navigationBarTitleText": "分包"
+          }
         }
-    ],
+      ]
+    },
+    {
+      "root": "pagesA",
+      "pages": [
+        {
+          "path": "sub/sub",
+          "style": {
+            "navigationBarTitleText": "分包A"
+          }
+        }
+      ]
+    }
+  ],
   "globalStyle": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uni-app",
@@ -63,29 +85,22 @@
     "backgroundColor": "#F8F8F8"
   },
   "tabBar": {
-  	"color": "#999999",
-  	"selectedColor": "#FF8008",
-  	"borderStyle": "white",
-  	"fontSize": "12px",
-  	"backgroundColor": "#ffffff",
-  	"iconWidth": "30px",
-  	"height": "56px",
-  	"list": [
-  		// #ifdef APP-PLUS
-  		{
-  			"pagePath": "pages/tasks/tasks",
-  			"iconPath": "static/tab/tasks-icon.png",
-  			"selectedIconPath": "static/tab/tasks-selected-icon.png",
-  			"text": "任务"
-  		},
-  		{
-  			"pagePath": "pages/video/video",
-  			"iconPath": "static/tab/community-icon.png",
-  			"selectedIconPath": "static/tab/community-selected-icon.png",
-  			"text": "社区"
-  			
-  		}
-  		// #endif
-  	]
+    "color": "#999999",
+    "selectedColor": "#FF8008",
+    "borderStyle": "white",
+    "fontSize": "12px",
+    "backgroundColor": "#ffffff",
+    "iconWidth": "30px",
+    "height": "56px",
+    "list": [
+      {
+        "pagePath": "pages/tasks/tasks",
+        "text": "任务"
+      },
+      {
+        "pagePath": "pages/video/video",
+        "text": "社区"
+      }
+    ]
   }
 }
