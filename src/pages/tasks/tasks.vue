@@ -13,25 +13,24 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {}
-  },
-  methods: {
-    goSub() {
-      uni.navigateTo({
-        url: "/pages/sub/sub",
-        success(res) {
-          console.log('res', res)
-        },
-        fail(err) {
-          console.log('err', err)
-        }
-      })
-    }
-  },
-}
+  export default {
+    data() {
+      return {}
+    },
+    methods: {
+      goSub() {
+        uni.navigateTo({
+          url: '/pages/sub/sub',
+          success(res) {
+            console.log('res', res)
+          },
+          fail(err) {
+            console.log('err', err)
+          },
+        })
+      },
+    },
+  }
 </script>
 
-<style>
-</style>
+<style></style>
