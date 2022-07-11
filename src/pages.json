@@ -1,6 +1,14 @@
 {
   "pages": [
     {
+      "path": "pages/drag/drag",
+      "style": {
+		"navigationStyle": "custom",
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
       "path": "pages/video/video",
       "style": {
         "navigationStyle": "custom",
